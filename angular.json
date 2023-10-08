@@ -7,7 +7,11 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": true
+        },
+        "@schematics/angular:pipe": {
+          "standalone": true
         }
       },
       "root": "",
@@ -30,9 +34,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/ngx-spinner/animations/line-scale-pulse-out.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b7c73114-5aec-40af-ad93-5b3876aeb737"
   }
 }
